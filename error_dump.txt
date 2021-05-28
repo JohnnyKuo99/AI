@@ -1,0 +1,50 @@
+ubuntu@ubuntu-TUF-Gaming-FX505GT:/opt/ota/ota_agent_v1.1.1.5$ ./ota_agent
+=== OTA agent 1.1.1.5 ===
+DNS: 172.18.125.57
+OTA_agent Error while fetching server API version: ('Connection aborted.', PermissionError(13, 'Permission denied'))
+-- MENU: 選擇model: --
+  (1) classifier_inference_engine
+[?] 輸入model編號: 1
+Traceback (most recent call last):
+  File "urllib3/connectionpool.py", line 706, in urlopen
+  File "urllib3/connectionpool.py", line 394, in _make_request
+  File "http/client.py", line 1281, in request
+  File "http/client.py", line 1327, in _send_request
+  File "http/client.py", line 1276, in endheaders
+  File "http/client.py", line 1042, in _send_output
+  File "http/client.py", line 980, in send
+  File "docker/transport/unixconn.py", line 43, in connect
+PermissionError: [Errno 13] Permission denied
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "requests/adapters.py", line 449, in send
+  File "urllib3/connectionpool.py", line 756, in urlopen
+  File "urllib3/util/retry.py", line 532, in increment
+  File "urllib3/packages/six.py", line 734, in reraise
+  File "urllib3/connectionpool.py", line 706, in urlopen
+  File "urllib3/connectionpool.py", line 394, in _make_request
+  File "http/client.py", line 1281, in request
+  File "http/client.py", line 1327, in _send_request
+  File "http/client.py", line 1276, in endheaders
+  File "http/client.py", line 1042, in _send_output
+  File "http/client.py", line 980, in send
+  File "docker/transport/unixconn.py", line 43, in connect
+urllib3.exceptions.ProtocolError: ('Connection aborted.', PermissionError(13, 'Permission denied'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "docker/api/client.py", line 214, in _retrieve_server_version
+  File "docker/api/daemon.py", line 181, in version
+  File "docker/utils/decorators.py", line 46, in inner
+  File "docker/api/client.py", line 237, in _get
+  File "requests/sessions.py", line 555, in get
+  File "requests/sessions.py", line 542, in request
+  File "requests/sessions.py", line 655, in send
+  File "requests/adapters.py", line 498, in send
+requests.exceptions.ConnectionError: ('Connection aborted.', PermissionError(13, 'Permission denied'))
+
+During handling of the above exception, another exception occurred:
+
